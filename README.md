@@ -46,5 +46,37 @@ Can include but not limited to:
 
 ![Diagram](rental-application-class-diagram-v_1_0_0.png)
 
+# Status Value Table
 
+| **Entity**             | **Status**        | **Value**            | **Explanation** |
+|------------------------|------------------|----------------------|-----------------|
+| **Product**            | Active           | `Active`             | Product is available for rent. |
+|                        | Inactive         | `Inactive`           | Product is not available for rent (e.g., discontinued). |
+|                        | Damaged          | `Damaged`            | Product is damaged and cannot be rented out. |
+|                        | Out of Stock     | `OutOfStock`         | Product is out of stock and cannot be rented out. |
+| **Rental Order**       | Active           | `Active`             | Rental order is currently in process (e.g., items have been rented out). |
+|                        | Completed        | `Completed`          | Rental order is fulfilled and completed. |
+|                        | Cancelled        | `Cancelled`          | Rental order has been cancelled by the customer or system. |
+|                        | Overdue          | `Overdue`            | Rental order is overdue for return or payment. |
+| **Rental Order Item**  | Rented           | `Rented`             | Item is currently rented out. |
+|                        | Returned         | `Returned`           | Item has been returned by the customer. |
+|                        | Damaged          | `Damaged`            | Item was returned in a damaged condition. |
+|                        | Lost             | `Lost`               | Item has been reported lost. |
+| **Payment**            | Pending          | `Pending`            | Payment is initiated but not yet completed. |
+|                        | Completed        | `Completed`          | Payment has been successfully completed. |
+|                        | Failed           | `Failed`             | Payment attempt failed. |
+|                        | Refunded         | `Refunded`           | Payment has been refunded to the customer. |
+| **Invoice**            | Paid             | `Paid`               | Invoice has been fully paid by the customer. |
+|                        | Unpaid           | `Unpaid`             | Invoice is not yet paid. |
+|                        | Overdue          | `Overdue`            | Invoice payment is overdue. |
+| **Refund**             | Pending          | `Pending`            | Refund is initiated but not yet processed. |
+|                        | Completed        | `Completed`          | Refund has been successfully processed. |
+|                        | Failed           | `Failed`             | Refund attempt failed. |
+| **Customer**           | Good Standing    | `GoodStanding`       | Customer has no outstanding balance. |
+|                        | Overdue          | `Overdue`            | Customer has overdue payments. |
+|                        | Blocked          | `Blocked`            | Customer is blocked from making new rentals due to overdue balances. |
+| **Inventory Adjustment** | Stock In       | `StockIn`            | Inventory has been increased (e.g., restocking). |
+|                          | Stock Out      | `StockOut`           | Inventory has been reduced (e.g., product removed permanently). |
+|                          | Damage         | `Damage`             | Inventory adjustment due to damage. |
+|                          | Correction     | `Correction`         | Adjustment made to correct inventory discrepancies. |
 
