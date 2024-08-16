@@ -44,7 +44,7 @@ Can include but not limited to:
 
 ### Class Diagram
 
-![Diagram](https://)
+![Diagram](rental-application-class-diagram-v_1_0_0.png)
 
 
 
